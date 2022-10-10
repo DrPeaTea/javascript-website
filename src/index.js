@@ -4,6 +4,9 @@ const homePageBtn = document.querySelector(".home");
 const popPageBtn = document.querySelector(".stock");
 const contactBtn = document.querySelector(".contact");
 function homePage() {
+  while (content.lastChild) {
+    content.lastChild.remove();
+  }
   //home page stuff
   const homePageTitle = document.createElement("div");
   const homePageInfo = document.createElement("div");
@@ -31,7 +34,11 @@ function homePage() {
   content.appendChild(homePageHours);
   content.appendChild(homePageLocation);
 }
+
 function stockPage() {
+  while (content.lastChild) {
+    content.lastChild.remove();
+  }
   //stock page stuff
   const stockPageTitle = document.createElement("div");
   const stockPageInfo = document.createElement("div");
@@ -49,6 +56,9 @@ function stockPage() {
   content.appendChild(stockPageInfo);
 }
 function contactPage() {
+  while (content.lastChild) {
+    content.lastChild.remove();
+  }
   //contact page stuff
   const contactTitle = document.createElement("div");
   const contactInfo = document.createElement("div");
